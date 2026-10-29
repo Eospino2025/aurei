@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AUREI | Te Amoooo</title>
+<meta name="description" content="AUREI | Moda femenina. Piezas para sentirte tú, en cada momento.">
+<meta property="og:title" content="AUREI | Jeans y bodys">
+<meta property="og:description" content="AUREI | Moda femenina. Piezas para sentirte tú, en cada momento.">
+<meta name="theme-color" content="#3E2A24">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text x='24' y='.85em' font-size='80' font-family='serif' font-weight='bold'>A</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--denim:#3E2A24;--denim2:#5a3d33;--chalk:#F4EFE6;--ink:#1A1614;--bar:#3E2A24;--stitch:#D2A67A;--line:#e3dbcc;--mute:#6b5d55;--ok:#1f8a4c;
+--r:6px;--fh:'Bodoni Moda',Didot,Georgia,serif;--fb:'Jost',system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+body{font-family:var(--fb);color:var(--ink);background:var(--chalk);line-height:1.55;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block}
+a{color:inherit}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:3px solid var(--stitch);outline-offset:2px}
+.wrap{width:min(1160px,100% - 2rem);margin-inline:auto}
+h1,h2,h3{font-family:var(--fh);line-height:1.1}
+h2{font-size:clamp(1.7rem,4vw,2.5rem);font-weight:600;color:var(--denim)}
+section{padding:clamp(2.5rem,7vw,5rem) 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.4rem;border-radius:3px;font-weight:700;text-decoration:none;transition:transform .15s,background .15s}
+.btn:active{transform:scale(.97)}
+.btn-main{background:var(--stitch);color:var(--ink)}
+.btn-main:hover{background:#e3c19a}
+.btn-dark{background:var(--denim);color:#fff}
+.btn-dark:hover{background:var(--denim2)}
+.btn-line{border:2px solid currentColor}
+/* header */
+.ann{background:var(--bar);color:var(--chalk);text-align:center;padding:.5rem 1rem;font-size:.9rem}
+.ann a{margin-left:.5rem;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+header{position:sticky;top:0;z-index:30;background:transparent;color:var(--denim);transition:background .3s,color .3s,box-shadow .3s}
+header.solid{background:var(--bar);color:var(--chalk);box-shadow:0 2px 14px rgba(0,0,0,.25)}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;width:100%;margin-inline:0;padding:1rem clamp(1rem,3vw,2.5rem)}
+.logo{font-family:var(--fh);font-weight:700;font-size:1.9rem;letter-spacing:.14em;text-decoration:none;color:inherit;justify-self:center}
+.menu{grid-column:1;grid-row:1}.logo{grid-column:2;grid-row:1}.hr{grid-column:3;grid-row:1}
+.hr{display:flex;justify-content:flex-end;gap:.3rem;align-items:center}
+.ib,.cartbtn{position:relative;width:42px;height:42px;display:grid;place-items:center;border-radius:50%}
+.ib:hover,.cartbtn:hover{background:rgba(128,100,85,.18)}
+.cartbtn b{position:absolute;top:0;right:0;background:var(--stitch);color:var(--ink);border-radius:999px;min-width:18px;height:18px;display:grid;place-items:center;font-size:.7rem;font-weight:600}
+nav{display:flex;gap:1.6rem;margin-right:.8rem}
+nav a{text-decoration:none;font-weight:500;letter-spacing:.03em}
+nav a:hover{color:#8A5A3C}
+header.solid nav a:hover{color:var(--stitch)}
+.menu{display:none;font-size:1.6rem;justify-self:start}
+@media(max-width:900px){.menu{display:block}.logo{font-size:1.5rem}nav{display:none;flex-direction:column;gap:1rem;padding:1rem;margin:0;background:var(--chalk);color:var(--denim);border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:absolute;left:0;right:0;top:100%}nav.open{display:flex}}
+/* hero */
+.hero{margin-top:calc(var(--hh,0px) * -1);padding:calc(clamp(2rem,6vw,4rem) + var(--hh,0px)) 0 clamp(2rem,6vw,4rem)}
+.hg{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);font-weight:500;color:var(--denim);max-width:14ch}
+.hero p{font-size:1.15rem;max-width:44ch;margin:1.2rem 0 2rem;color:var(--mute)}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap}
+.hero .btn-main{background:var(--denim);color:var(--chalk)}
+.hero .btn-main:hover{background:var(--denim2)}
+.hero .btn-line{color:var(--denim)}
+.art{aspect-ratio:4/5;max-height:640px;width:100%;background:repeating-linear-gradient(90deg,var(--denim) 0 10px,var(--chalk) 10px 20px);background-size:cover;background-position:center;display:grid;place-items:center}
+.badge{background:var(--chalk);padding:2rem 2.4rem;text-align:center;box-shadow:0 0 0 8px var(--chalk)}
+.badge b{display:block;font-family:var(--fh);font-weight:600;font-size:clamp(2rem,5vw,3.4rem);letter-spacing:.06em;color:var(--ink)}
+.badge span{font-size:.85rem;letter-spacing:.2em;color:var(--mute)}
+.art.photo .badge{display:none}
+@media(max-width:800px){.hg{grid-template-columns:1fr}.art{aspect-ratio:16/11}}
+/* benefits */
+.ben{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:0}
+.ben div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.1rem}
+.ben strong{display:block;font-family:var(--fh);color:var(--denim)}
+.ben span{color:var(--mute);font-size:.92rem}
+/* catalog */
+.tools{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0}
+.chip{padding:.5rem 1.1rem;border-radius:3px;border:2px solid var(--denim);font-weight:700;color:var(--denim)}
+.chip[aria-pressed=true]{background:var(--denim);color:#fff}
+.tools input,.tools select{padding:.55rem .9rem;border:1px solid var(--line);border-radius:3px;font:inherit;background:#fff;min-width:0}
+.tools input{flex:1 1 180px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;text-align:left;display:flex;flex-direction:column;transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 10px 28px rgba(28,43,69,.15);transform:translateY(-3px)}
+.ph{aspect-ratio:4/5;position:relative;background:linear-gradient(160deg,var(--c1),var(--c2));display:grid;place-items:center;overflow:hidden}
+.ph img{width:100%;height:100%;object-fit:cover}
+.ph .ico{font-size:4rem;opacity:.85}
+.tag{position:absolute;top:.7rem;left:.7rem;background:var(--stitch);padding:.2rem .7rem;border-radius:3px;font-size:.78rem;font-weight:700}
+.info{padding:.9rem 1rem 1.1rem}
+.info h3{font-family:var(--fb);font-size:1.05rem;font-weight:500}
+.price{font-weight:700;margin-top:.3rem}
+.price s{color:var(--mute);font-weight:400;margin-left:.4rem;font-size:.9rem}
+.dots{display:flex;gap:.3rem;margin-top:.5rem}
+.dots i{width:14px;height:14px;border-radius:50%;border:1px solid var(--line)}
+.empty{padding:3rem 0;text-align:center;color:var(--mute)}
+/* modal */
+dialog{border:0;border-radius:6px;padding:0;width:min(860px,94vw);max-height:92vh;overflow:auto;background:#fff}
+dialog::backdrop{background:rgba(10,16,28,.6)}
+.dg{display:grid;grid-template-columns:1fr 1fr}
+@media(max-width:700px){.dg{grid-template-columns:1fr}}
+.dg .ph{aspect-ratio:auto;min-height:320px;height:100%}
+.dd{padding:1.6rem;display:flex;flex-direction:column;gap:1rem}
+.x{position:absolute;top:.6rem;right:.8rem;font-size:1.8rem;z-index:2;background:#fff;border-radius:50%;width:38px;height:38px;line-height:1}
+.opts{display:flex;flex-wrap:wrap;gap:.5rem}
+.opt{min-width:46px;padding:.45rem .8rem;border:2px solid var(--line);border-radius:3px;font-weight:700}
+.opt[aria-pressed=true]{border-color:var(--denim);background:var(--denim);color:#fff}
+.sw{width:34px;height:34px;border-radius:50%;border:2px solid var(--line)}
+.sw[aria-pressed=true]{outline:3px solid var(--denim);outline-offset:2px}
+.lbl{font-weight:700;font-size:.9rem;margin-bottom:.4rem}
+.err{color:#b3261e;font-size:.9rem;min-height:1.2em}
+/* cart */
+.shade{position:fixed;inset:0;background:rgba(10,16,28,.55);z-index:40;opacity:0;pointer-events:none;transition:.25s}
+.shade.on{opacity:1;pointer-events:auto}
+aside{position:fixed;top:0;right:0;height:100%;width:min(420px,100%);background:#fff;z-index:50;transform:translateX(100%);transition:transform .3s;display:flex;flex-direction:column}
+aside.on{transform:none}
+.ch{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.2rem;border-bottom:1px solid var(--line)}
+.ch h3{font-size:1.3rem}
+.items{flex:1;overflow:auto;padding:1rem 1.2rem;display:flex;flex-direction:column;gap:1rem}
+.it{display:grid;grid-template-columns:64px 1fr auto;gap:.8rem;align-items:center}
+.it .ph{aspect-ratio:1;border-radius:3px}.it .ico{font-size:1.6rem}
+.it small{color:var(--mute);display:block}
+.qty{display:inline-flex;align-items:center;gap:.5rem;margin-top:.3rem}
+.qty button{width:28px;height:28px;border-radius:50%;border:1px solid var(--line);font-weight:700}
+.cf{padding:1.2rem;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:.8rem}
+.tot{display:flex;justify-content:space-between;font-weight:700;font-size:1.2rem}
+.cf input{padding:.7rem .9rem;border:1px solid var(--line);border-radius:3px;font:inherit}
+.wa{background:#25d366;color:#052e16}
+.wa:hover{background:#3be07a}
+/* sections */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:1.5rem}
+.box{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1.4rem}
+.box h3{margin-bottom:.6rem;color:var(--denim)}
+table{width:100%;border-collapse:collapse;font-size:.95rem}
+th,td{padding:.55rem;border-bottom:1px solid var(--line);text-align:center}
+th{background:var(--chalk);font-family:var(--fh)}
+.scroll{overflow-x:auto}
+.steps{list-style:none;padding:0;display:grid;gap:.9rem;counter-reset:s}
+.steps li{counter-increment:s;padding-left:3rem;position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--denim);color:#fff;display:grid;place-items:center;font-weight:700}
+.rev{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;margin-top:1.5rem}
+.rev blockquote{background:#fff;border-left:5px solid var(--stitch);border-radius:var(--r);padding:1.2rem;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.rev cite{display:block;margin-top:.6rem;font-weight:700;font-style:normal;color:var(--denim)}
+details{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.2rem;margin-top:.7rem}
+summary{font-weight:700;cursor:pointer}
+details p{margin-top:.6rem;color:var(--mute)}
+.alt{background:#fff}
+footer{background:var(--denim);color:#fff;padding:2.5rem 0 5rem}
+footer .two{margin:0}
+footer a{color:var(--stitch)}
+.fab{position:fixed;right:1rem;bottom:1rem;z-index:25;width:58px;height:58px;border-radius:50%;background:#25d366;display:grid;place-items:center;font-size:1.8rem;box-shadow:0 6px 18px rgba(0,0,0,.3);text-decoration:none}
+.toast{position:fixed;left:50%;bottom:5rem;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:.7rem 1.2rem;border-radius:3px;opacity:0;transition:.25s;z-index:60;pointer-events:none}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="ann">Arma tu look con jeans y bodys <a href="#catalogo">Ver catálogo</a></div>
+<header id="hdr">
+ <div class="wrap bar">
+  <button class="menu" id="menuBtn" aria-label="Menú" aria-expanded="false">☰</button>
+  <a class="logo" href="#inicio" id="brand"></a>
+  <div class="hr">
+   <nav id="nav" aria-label="Principal"><a href="#catalogo">Catálogo</a><a href="#tallas">Tallas</a><a href="#contacto">Contacto</a></nav>
+   <button class="ib" id="searchBtn" aria-label="Buscar productos"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg></button>
+   <button class="cartbtn" id="openCart" aria-label="Abrir carrito"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><b id="count">0</b></button>
+  </div>
+ </div>
+</header>
+
+<main>
+<div class="hero" id="inicio">
+ <div class="wrap hg">
+  <div>
+   <h1 id="slogan"></h1>
+   <p>Jeans y bodys para tu día a día y para esas noches que valen la pena. Pide por WhatsApp y recibe en tu casa.</p>
+   <div class="cta"><a class="btn btn-main" href="#catalogo">Ver catálogo</a><a class="btn btn-line" id="heroWa" href="#" target="_blank" rel="noopener">Escríbenos</a></div>
+  </div>
+  <div class="art" id="art"><div class="badge"><b>AUREI</b><span>priceless moments</span></div></div>
+ </div>
+</div>
+
+<div class="wrap ben">
+ <div><strong>Envíos a toda Colombia</strong><span>Despachamos en 24 a 48 horas.</span></div>
+ <div><strong>Cambio por talla</strong><span>Si no te queda, lo cambiamos.</span></div>
+ <div><strong>Paga como quieras</strong><span>Nequi, Daviplata, transferencia o contraentrega.</span></div>
+ <div><strong>Atención directa</strong><span>Hablas con nosotros, sin intermediarios.</span></div>
+</div>
+
+<section id="catalogo">
+ <div class="wrap">
+  <h2>Catálogo</h2>
+  <div class="tools">
+   <button class="chip" data-cat="todo" aria-pressed="true">Todo</button>
+   <button class="chip" data-cat="jeans" aria-pressed="false">Jeans</button>
+   <button class="chip" data-cat="bodys" aria-pressed="false">Bodys</button>
+   <input id="q" type="search" placeholder="Buscar producto" aria-label="Buscar producto">
+   <select id="sizeF" aria-label="Filtrar por talla"><option value="">Todas las tallas</option></select>
+   <select id="sort" aria-label="Ordenar"><option value="">Ordenar</option><option value="asc">Menor precio</option><option value="desc">Mayor precio</option></select>
+  </div>
+  <div class="grid" id="grid"></div>
+  <p class="empty" id="empty" hidden>No encontramos productos con esos filtros. Prueba con otra talla o búsqueda.</p>
+ </div>
+</section>
+
+<section class="alt" id="tallas">
+ <div class="wrap">
+  <h2>Guía de tallas</h2>
+  <div class="two">
+   <div class="box"><h3>Jeans</h3><div class="scroll"><table>
+    <tr><th>Talla</th><th>Cintura (cm)</th><th>Cadera (cm)</th></tr>
+    <tr><td>6</td><td>64</td><td>90</td></tr><tr><td>8</td><td>68</td><td>94</td></tr>
+    <tr><td>10</td><td>72</td><td>98</td></tr><tr><td>12</td><td>76</td><td>102</td></tr><tr><td>14</td><td>80</td><td>106</td></tr></table></div></div>
+   <div class="box"><h3>Bodys</h3><div class="scroll"><table>
+    <tr><th>Talla</th><th>Busto (cm)</th><th>Cintura (cm)</th></tr>
+    <tr><td>S</td><td>82–86</td><td>62–66</td></tr><tr><td>M</td><td>88–92</td><td>68–72</td></tr>
+    <tr><td>L</td><td>94–98</td><td>74–78</td></tr></table></div>
+    <p style="margin-top:.8rem;color:var(--mute);font-size:.92rem">Medidas de ejemplo. Cámbialas por las reales de tu marca.</p></div>
+  </div>
+ </div>
+</section>
+
+</main>
+
+<footer id="contacto">
+ <div class="wrap two">
+  <div><h3 id="fbrand" style="font-size:1.6rem"></h3><p style="opacity:.85;margin-top:.5rem" id="fcity"></p></div>
+  <div><h3>Contacto</h3><p><a id="fwa" href="#" target="_blank" rel="noopener">WhatsApp</a><br><a id="fig" href="#" target="_blank" rel="noopener">Instagram</a></p><p style="margin-top:.6rem;opacity:.85">Atención: lunes a sábado, 9:00 a.m. a 7:00 p.m.</p></div>
+ </div>
+</footer>
+
+<a class="fab" id="fab" href="#" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">💬</a>
+
+<dialog id="dlg"></dialog>
+<div class="shade" id="shade"></div>
+<aside id="cart" aria-label="Carrito">
+ <div class="ch"><h3>Tu carrito</h3><button id="closeCart" class="x" style="position:static" aria-label="Cerrar carrito">×</button></div>
+ <div class="items" id="items"></div>
+ <div class="cf">
+  <div class="tot"><span>Total</span><span id="total">$0</span></div>
+  <input id="cname" placeholder="Tu nombre" autocomplete="name">
+  <input id="ccity" placeholder="Ciudad de entrega" autocomplete="address-level2">
+  <a class="btn wa" id="send" href="#" target="_blank" rel="noopener">Pedir por WhatsApp</a>
+  <button class="btn btn-line" id="clear" style="color:var(--mute)">Vaciar carrito</button>
+ </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ============ CONFIGURACIÓN: edita solo esta parte ============ */
+const CONFIG={
+  name:"AUREI",
+  slogan:"Piezas para sentirte tú, en cada momento",
+  whatsapp:"573000000000",   // código de país + número, sin + ni espacios
+  instagram:"aurei.col",       // usuario sin @
+  city:"Colombia"
+};
+/* Para agregar un producto, copia un bloque y cambia los datos.
+   img: ruta de la foto, por ejemplo "fotos/jean1.jpg". Déjala vacía para ver un color de muestra. */
+const PRODUCTS=[
+ {id:1,name:"Jean mom tiro alto",cat:"jeans",price:89900,old:109900,tag:"Nuevo",sizes:["6","8","10","12"],colors:[{n:"Azul claro",h:"#9db7d6"},{n:"Azul oscuro",h:"#27395c"}],img:"",desc:"Corte mom de tiro alto, tela rígida que no se deforma y se ajusta a tu cintura."},
+ {id:2,name:"Jean wide leg",cat:"jeans",price:99900,sizes:["6","8","10","12","14"],colors:[{n:"Azul medio",h:"#5d7fae"},{n:"Negro",h:"#1b1b1f"}],img:"",desc:"Pierna ancha y larga, cómodo y con mucho estilo."},
+ {id:3,name:"Jean skinny push up",cat:"jeans",price:84900,tag:"Más vendido",sizes:["6","8","10","12","14"],colors:[{n:"Azul medio",h:"#5d7fae"}],img:"",desc:"Tela elástica con efecto push up, se siente como una segunda piel."},
+ {id:4,name:"Jean recto clásico",cat:"jeans",price:92900,sizes:["8","10","12"],colors:[{n:"Azul oscuro",h:"#27395c"},{n:"Gris",h:"#8a9099"}],img:"",desc:"Corte recto que combina con todo."},
+ {id:5,name:"Body manga larga",cat:"bodys",price:49900,sizes:["S","M","L"],colors:[{n:"Negro",h:"#1b1b1f"},{n:"Blanco",h:"#f4f4f4"},{n:"Beige",h:"#d6c3a5"}],img:"",desc:"Tela suave y elástica, con cierre a presión cómodo."},
+ {id:6,name:"Body strapless",cat:"bodys",price:44900,old:54900,tag:"Oferta",sizes:["S","M","L"],colors:[{n:"Negro",h:"#1b1b1f"},{n:"Rojo",h:"#b3261e"}],img:"",desc:"Ajuste firme que no se corre, ideal para salir."},
+ {id:7,name:"Body cuello alto",cat:"bodys",price:52900,sizes:["S","M"],colors:[{n:"Blanco",h:"#f4f4f4"},{n:"Café",h:"#6b4a35"}],img:"",desc:"Elegante y versátil, perfecto con jean o falda."}
+];
+/* ================================================================ */
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const money=n=>"$"+n.toLocaleString("es-CO");
+const wa=(t="")=>`https://wa.me/${CONFIG.whatsapp}${t?"?text="+encodeURIComponent(t):""}`;
+let cart=[];try{cart=JSON.parse(localStorage.getItem("cart")||"[]")}catch(e){}
+const save=()=>{try{localStorage.setItem("cart",JSON.stringify(cart))}catch(e){}};
+const state={cat:"todo",q:"",size:"",sort:""};
+
+/* identidad */
+document.title=`${CONFIG.name} | Jeans y bodys`;
+["brand","fbrand"].forEach(i=>$("#"+i).textContent=CONFIG.name);
+$("#slogan").textContent=CONFIG.slogan;
+$("#fcity").textContent="Hecho con cariño en "+CONFIG.city;
+["heroWa","fwa","fab"].forEach(i=>$("#"+i).href=wa("Hola, quiero información sobre sus productos."));
+$("#fig").href="https://instagram.com/"+CONFIG.instagram;$("#fig").textContent="Instagram @"+CONFIG.instagram;
+
+/* tallas del filtro */
+[...new Set(PRODUCTS.flatMap(p=>p.sizes))].forEach(s=>$("#sizeF").insertAdjacentHTML("beforeend",`<option>${s}</option>`));
+
+const ph=(p,c=0)=>{const col=p.colors[c]?.h||"#9db7d6";
+ return `<div class="ph" style="--c1:${col};--c2:#3E2A24">${p.img?`<img src="${p.img}" alt="${p.name}" loading="lazy">`:`<span class="ico">${p.cat==="jeans"?"👖":"👚"}</span>`}</div>`};
+
+function render(){
+ let list=PRODUCTS.filter(p=>(state.cat==="todo"||p.cat===state.cat)&&(!state.size||p.sizes.includes(state.size))&&p.name.toLowerCase().includes(state.q.toLowerCase()));
+ if(state.sort)list.sort((a,b)=>state.sort==="asc"?a.price-b.price:b.price-a.price);
+ $("#empty").hidden=list.length>0;
+ $("#grid").innerHTML=list.map(p=>`<button class="card" data-id="${p.id}" aria-label="Ver ${p.name}">
+  <div style="position:relative">${ph(p)}${p.tag?`<span class="tag">${p.tag}</span>`:""}</div>
+  <div class="info"><h3>${p.name}</h3><div class="price">${money(p.price)}${p.old?`<s>${money(p.old)}</s>`:""}</div>
+  <div class="dots">${p.colors.map(c=>`<i style="background:${c.h}" title="${c.n}"></i>`).join("")}</div></div></button>`).join("");
+}
+$$(".chip").forEach(b=>b.onclick=()=>{state.cat=b.dataset.cat;$$(".chip").forEach(x=>x.setAttribute("aria-pressed",x===b));render()});
+$("#q").oninput=e=>{state.q=e.target.value;render()};
+$("#sizeF").onchange=e=>{state.size=e.target.value;render()};
+$("#sort").onchange=e=>{state.sort=e.target.value;render()};
+$("#grid").onclick=e=>{const c=e.target.closest(".card");if(c)openProduct(+c.dataset.id)};
+
+/* detalle */
+function openProduct(id){
+ const p=PRODUCTS.find(x=>x.id===id);let size="",ci=0;
+ const d=$("#dlg");
+ d.innerHTML=`<button class="x" aria-label="Cerrar">×</button><div class="dg"><div id="dph">${ph(p,0)}</div>
+ <div class="dd"><div><h3 style="font-size:1.6rem">${p.name}</h3><div class="price" style="font-size:1.2rem">${money(p.price)}${p.old?`<s>${money(p.old)}</s>`:""}</div></div>
+ <p style="color:var(--mute)">${p.desc}</p>
+ <div><div class="lbl">Color: <span id="cn">${p.colors[0].n}</span></div><div class="opts">${p.colors.map((c,i)=>`<button class="sw" data-i="${i}" style="background:${c.h}" aria-label="${c.n}" aria-pressed="${i===0}"></button>`).join("")}</div></div>
+ <div><div class="lbl">Talla <a href="#tallas" style="font-weight:400;margin-left:.4rem" id="gl">Ver guía</a></div><div class="opts">${p.sizes.map(s=>`<button class="opt" data-s="${s}" aria-pressed="false">${s}</button>`).join("")}</div></div>
+ <div class="err" id="err"></div>
+ <button class="btn btn-dark" id="add">Agregar al carrito</button></div></div>`;
+ d.querySelector(".x").onclick=()=>d.close();
+ d.querySelector("#gl").onclick=()=>d.close();
+ d.onclick=e=>{if(e.target===d)d.close()};
+ d.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{size=b.dataset.s;d.querySelectorAll(".opt").forEach(x=>x.setAttribute("aria-pressed",x===b));$("#err").textContent=""});
+ d.querySelectorAll(".sw").forEach(b=>b.onclick=()=>{ci=+b.dataset.i;d.querySelectorAll(".sw").forEach(x=>x.setAttribute("aria-pressed",x===b));$("#cn").textContent=p.colors[ci].n;$("#dph").innerHTML=ph(p,ci)});
+ $("#add").onclick=()=>{
+  if(!size){$("#err").textContent="Elige una talla para continuar.";return}
+  const k=`${p.id}-${size}-${ci}`,f=cart.find(i=>i.k===k);
+  f?f.q++:cart.push({k,id:p.id,size,ci,q:1});
+  save();drawCart();d.close();toast("Agregado al carrito");
+ };
+ d.showModal();
+}
+
+/* carrito */
+function drawCart(){
+ const n=cart.reduce((a,i)=>a+i.q,0);$("#count").textContent=n;
+ let total=0;
+ $("#items").innerHTML=cart.length?cart.map(i=>{const p=PRODUCTS.find(x=>x.id===i.id);if(!p)return"";total+=p.price*i.q;
+  return `<div class="it">${ph(p,i.ci)}<div><b>${p.name}</b><small>Talla ${i.size} · ${p.colors[i.ci].n}</small>
+  <div class="qty"><button data-k="${i.k}" data-d="-1" aria-label="Quitar uno">−</button>${i.q}<button data-k="${i.k}" data-d="1" aria-label="Agregar uno">+</button></div></div><b>${money(p.price*i.q)}</b></div>`}).join(""):`<p class="empty">Tu carrito está vacío.</p>`;
+ $("#total").textContent=money(total);
+ $("#send").style.display=cart.length?"":"none";$("#clear").style.display=cart.length?"":"none";
+ const lines=cart.map(i=>{const p=PRODUCTS.find(x=>x.id===i.id);return p?`• ${i.q}x ${p.name} (talla ${i.size}, ${p.colors[i.ci].n}) - ${money(p.price*i.q)}`:""}).join("\n");
+ $("#send").dataset.msg=`Hola, quiero hacer este pedido:\n${lines}\n\nTotal: ${money(total)}`;
+}
+$("#items").onclick=e=>{const b=e.target.closest("button[data-k]");if(!b)return;
+ const i=cart.find(x=>x.k===b.dataset.k);i.q+=+b.dataset.d;if(i.q<1)cart=cart.filter(x=>x!==i);save();drawCart()};
+$("#clear").onclick=()=>{cart=[];save();drawCart()};
+$("#send").onclick=e=>{
+ const name=$("#cname").value.trim(),city=$("#ccity").value.trim();
+ let m=$("#send").dataset.msg+(name?`\nNombre: ${name}`:"")+(city?`\nCiudad: ${city}`:"");
+ $("#send").href=wa(m);
+};
+const cartOpen=o=>{$("#cart").classList.toggle("on",o);$("#shade").classList.toggle("on",o)};
+$("#openCart").onclick=()=>cartOpen(true);$("#closeCart").onclick=()=>cartOpen(false);$("#shade").onclick=()=>cartOpen(false);
+document.addEventListener("keydown",e=>{if(e.key==="Escape")cartOpen(false)});
+
+/* menú móvil */
+const hdr=$("#hdr");
+const setH=()=>document.documentElement.style.setProperty("--hh",hdr.offsetHeight+"px");
+const onScroll=()=>hdr.classList.toggle("solid",scrollY>40);
+addEventListener("scroll",onScroll,{passive:true});addEventListener("resize",setH);addEventListener("load",setH);setH();onScroll();
+$("#searchBtn").onclick=()=>{$("#catalogo").scrollIntoView();setTimeout(()=>$("#q").focus(),450)};
+$("#menuBtn").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",o)};
+$("#nav").onclick=e=>{if(e.target.tagName==="A")$("#nav").classList.remove("open")};
+
+let tt;function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("on");clearTimeout(tt);tt=setTimeout(()=>e.classList.remove("on"),1800)}
+const art=$("#art"),pi=new Image();pi.onload=()=>{art.style.backgroundImage="url(fotos/portada.jpg)";art.classList.add("photo")};pi.src="fotos/portada.jpg";
+render();drawCart();
+</script>
+</body>
+</html>
